@@ -1,0 +1,53 @@
+@import colors.sass
+
+=tabs
+  :border-bottom= 1px "solid" !tabs_edge_color
+  // fixing IE 6
+  :height 1%
+  :margin 0 0 .75em 0
+  :min-height auto
+  :overflow auto
+
+  li
+    :border= 1px "solid" !tabs_edge_color
+    :border-bottom none
+    :float left
+    :line-height 1.5
+    :list-style-type none
+    :margin 0 .25em 0 0
+    :padding 0
+
+    a
+      :background= !tabs_color
+      :border= 1px "solid" !tabs_border_color
+      :border-bottom none
+      :color= !tabs_text_color
+      :cursor pointer
+      :display block
+      :float left
+      :font-weight bold
+      :padding 0.15em 0.33em 0.25em 0.33em
+
+      &.selected
+        :background= !tabs_selected_color
+        :border= 1px "solid" !tabs_selected_color
+        :border-bottom none
+        :color= !tabs_selected_text_color
+        :cursor default
+
+        &:focus, &:hover
+          :color #fafafa
+
+      &, &:focus, &:hover
+        :text-decoration none
+      
+      &:focus, &:hover
+        :color= !tabs_hover_text_color
+        :outline none
+
+    &.label
+      :border-style none
+      :font-weight bold
+      :line-height 1.5
+      :margin-right 0.5em
+      :padding 0.25em 0.33em 0.25em 0.33em
